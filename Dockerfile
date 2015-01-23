@@ -10,5 +10,8 @@ RUN ln -s /usr/lib/x86_64-linux-gnu/libz.so /usr/lib
 RUN ln -s /usr/lib/x86_64-linux-gnu/libboost_python.so /usr/lib
 RUN ln -s /usr/lib/x86_64-linux-gnu/libboost_thread.so /usr/lib
 
+#add cartocss install script
+ADD ./scripts/install_carto.sh /usr/bin/install_carto.sh
 # install tilestache, mapnik, and dependencies
 RUN pip install --allow-external PIL --allow-unverified PIL PIL tilestache simplejson werkzeug sympy Blit mapnik2 uwsgi
+RUN install_carto.sh
