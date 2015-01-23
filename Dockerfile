@@ -10,7 +10,7 @@ RUN ln -s /usr/lib/x86_64-linux-gnu/libz.so /usr/lib
 RUN ln -s /usr/lib/x86_64-linux-gnu/libboost_python.so /usr/lib
 RUN ln -s /usr/lib/x86_64-linux-gnu/libboost_thread.so /usr/lib
 
-RUN apt-get install nodejs-legacy npm
+RUN apt-get install -y nodejs-legacy npm
 RUN npm install -g gisce/carto
 
 # install tilestache, mapnik, and dependencies
