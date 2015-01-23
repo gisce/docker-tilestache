@@ -15,4 +15,4 @@ RUN npm install -g https://github.com/gisce/carto/archive/extends_zoom_level.tar
 
 # install tilestache, mapnik, and dependencies
 RUN pip install --allow-unverified https://github.com/TileStache/TileStache/archive/master.zip sympy Blit mapnik2 uwsgi
-
+RUN apt-get install -y fabric
