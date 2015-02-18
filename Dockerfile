@@ -1,6 +1,8 @@
 FROM ubuntu:14.04
 MAINTAINER GISCE-TI, S.L. <devel@gisce.net>
 
+RUN echo "deb http://ppa.launchpad.net/mapnik/nightly-2.3/ubuntu utopic main">>/etc/sources.list
+
 # install Python and all the mapnik dependencies
 RUN apt-get update -y && apt-get install -y libjpeg-dev zlib1g-dev python python-setuptools python-dev python-pip python-gdal libboost-python-dev software-properties-common libmapnik2.2 libmapnik-dev mapnik-utils python-mapnik nodejs-legacy npm
 
@@ -14,4 +16,5 @@ RUN npm install -g https://github.com/gisce/carto/archive/extends_zoom_level.tar
 
 # install tilestache, mapnik, and dependencies
 RUN pip install https://github.com/TileStache/TileStache/archive/master.zip sympy Blit mapnik2 uwsgi fabric osconf
+
 
