@@ -6,7 +6,7 @@ RUN apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 4F7B93595D50B6BA
 
 
 # install Python and all the mapnik dependencies
-RUN apt-get update -y && apt-get install -y libjpeg-dev zlib1g-dev python python-setuptools python-dev python-pip python-gdal libboost-python-dev software-properties-common libmapnik2.2 libmapnik-dev mapnik-utils python-mapnik nodejs-legacy npm
+RUN apt-get update -y && apt-get install -y libjpeg-dev zlib1g-dev python python-setuptools python-dev python-pip python-gdal libboost-python-dev software-properties-common libmapnik2.2 libmapnik-dev mapnik-utils python-mapnik nodejs-legacy npm mapnik-input-plugin-postgis
 
 # symlink the native extensions so Python can pick them up
 RUN ln -s /usr/lib/x86_64-linux-gnu/libjpeg.so /usr/lib
