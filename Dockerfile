@@ -1,7 +1,7 @@
 FROM ubuntu:14.04
 MAINTAINER GISCE-TI, S.L. <devel@gisce.net>
 
-RUN echo "deb http://ppa.launchpad.net/mapnik/nightly-2.3/ubuntu utopic main">>/etc/apt/sources.list
+RUN echo "deb http://ppa.launchpad.net/mapnik/nightly-2.3/ubuntu tursty main">>/etc/apt/sources.list
 
 # install Python and all the mapnik dependencies
 RUN apt-get update -y && apt-get install -y libjpeg-dev zlib1g-dev python python-setuptools python-dev python-pip python-gdal libboost-python-dev software-properties-common libmapnik2.2 libmapnik-dev mapnik-utils python-mapnik nodejs-legacy npm
