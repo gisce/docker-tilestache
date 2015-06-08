@@ -17,4 +17,4 @@ RUN ln -s /usr/lib/x86_64-linux-gnu/libboost_thread.so /usr/lib
 RUN npm install -g https://github.com/gisce/carto/archive/extends_zoom_level.tar.gz
 
 # install tilestache, mapnik, and dependencies
-RUN pip install https://github.com/TileStache/TileStache/archive/master.zip sympy Blit uwsgi fabric osconf psycopg2 raven<5.0
+RUN pip install https://github.com/TileStache/TileStache/archive/master.zip sympy Blit uwsgi fabric osconf psycopg2 raven\<5.0
